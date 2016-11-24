@@ -4,6 +4,7 @@ import subprocess
 import time
 
 while True:
-    cmd = 'echo low > /sys/class/drm/card0/device/power_dpm_force_performance_lev'
+    cmd = './radeonlow.sh'
+    print('Setting frequencies...')
     subprocess.call(cmd, shell=True)
     time.sleep(10)
