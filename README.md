@@ -1,6 +1,9 @@
-# AMDGPU Radeon Linux power management scripts
+# AMD Radeon Linux power management scripts
 
-Tested on Linux Mint 18, with Sapphire Radeon R9 380X
+Tested on Linux Mint 18, 
+with 
+Sapphire Radeon R9 380X (AMDGPU),
+Sapphire Radeon R7 260X (radeon)
 
 ## Use cases
 
@@ -21,6 +24,10 @@ which will print out `high` `low` or `auto`. If the file does not exist, dpm is 
 
 ## The scripts
 
-`radeonfreq.py` can be used to periodically print GPU and VRAM frequencies. It is useful to check that the desired power state has been applied.
+The scripts starting with `agpu` will set and read states for AMDGPU drivers, while those starting with `radeon` are for the radeon drivers.
 
-`radeonhigh.sh` and `radeonlow.sh` respectively set the highest and lowest clock profiles of your video card.
+`agpufreq` and `radeonfreq` will periodically print core and memory clocks.
+
+`agpulow` and `agpuhigh` will set lowest and highest profiles.
+
+`radeonset low` and `radeonset high` will do the same for radeon driver based cards.
