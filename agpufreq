@@ -4,6 +4,6 @@ import subprocess
 import time
 
 while True:
-  subprocess.call('cat /sys/kernel/debug/dri/0/radeon_pm_info', shell=True)
+  subprocess.call('cat /sys/kernel/debug/dri/0/amdgpu_pm_info', shell=True)
   time.sleep(0.5)
 
