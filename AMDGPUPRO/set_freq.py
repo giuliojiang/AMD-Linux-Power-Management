@@ -24,11 +24,13 @@ mem_index = raw_input()
 while True:
     print('')
     run_command_shell('echo manual > /sys/class/drm/card0/device/power_dpm_force_performance_level')
-    run_command_shell('echo {} > /sys/class/drm/card0/device/pp_dpm_sclk'.format(core_index))
-    run_command_shell('echo {} > /sys/class/drm/card0/device/pp_dpm_mclk'.format(mem_index))
+    
     print('=== Core clocks ===')
     run_command_shell('cat /sys/class/drm/card0/device/pp_dpm_sclk')
     print('=== Memory clocks ===')
     run_command_shell('cat /sys/class/drm/card0/device/pp_dpm_mclk')
+    
+    run_command_shell('echo {} > /sys/class/drm/card0/device/pp_dpm_sclk'.format(core_index))
+    run_command_shell('echo {} > /sys/class/drm/card0/device/pp_dpm_mclk'.format(mem_index))
+    
     time.sleep(10)
-
