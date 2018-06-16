@@ -35,3 +35,21 @@ The scripts starting with `agpu` will set and read states for AMDGPU drivers, wh
 ## Interactive script
 
 `AMDGPUPRO/set_freq.py` will list available core and memory clocks. You will be able to choose which one to use, and the script sets them and starts outputting the current states.
+
+Example:
+
+```
+gj@linux-beic ~/git/AMD-Linux-Power-Management/AMDGPUPRO (master) $ sudo ./set_freq.py 
+0: 300Mhz *
+1: 473Mhz 
+2: 745Mhz 
+3: 829Mhz 
+4: 870Mhz 
+5: 903Mhz 
+6: 938Mhz 
+7: 1040Mhz 
+Please enter the desired core power state
+
+
+```
+And enter the number to select the frequency. For example, if you want to use 938Mhz, write 6 and press ENTER.
