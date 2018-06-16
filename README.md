@@ -31,3 +31,7 @@ The scripts starting with `agpu` will set and read states for AMDGPU drivers, wh
 `agpulow` and `agpuhigh` will set lowest and highest profiles.
 
 `radeonset low` and `radeonset high` will do the same for radeon driver based cards.
+
+## Interactive script
+
+`AMDGPUPRO/set_freq.py` will list available core and memory clocks. You will be able to choose which one to use, and the script sets them and starts outputting the current states.
