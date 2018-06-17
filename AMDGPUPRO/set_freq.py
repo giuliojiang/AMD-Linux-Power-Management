@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 #cat /sys/class/drm/card0/device/pp_dpm_sclk
 #echo manual > /sys/class/drm/card0/device/power_dpm_force_performance_level
@@ -15,11 +15,11 @@ def run_command_shell(cmd):
 
 run_command_shell('cat /sys/class/drm/card0/device/pp_dpm_sclk')
 print('Please enter the desired core power state')
-core_index = raw_input()
+core_index = input()
 
 run_command_shell('cat /sys/class/drm/card0/device/pp_dpm_mclk')
 print('Please enter the desired memory power state')
-mem_index = raw_input()
+mem_index = input()
 
 while True:
     print('')
